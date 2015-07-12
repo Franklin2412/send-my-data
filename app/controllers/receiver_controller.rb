@@ -5,12 +5,14 @@ class ReceiverController < ApplicationController
   def success
     # render text: "Just returning the post params #{params}"
     # render js: "PayU.onSuccess(#{params})"
-    render js: "PayU.onSuccess();"
+    # render js: "PayU.onSuccess();"
+    @bank_response = params
   end
 
   def failure
     # render text: "Just returning the post params #{params}"
     # render js: "PayU.onFailure(#{params})"
-    render js: "PayU.onFailure();"
+    # render js: "PayU.onFailure();"
+    @bank_response = params
   end
 end
