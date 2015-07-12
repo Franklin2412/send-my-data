@@ -1,5 +1,5 @@
 <h1>This is the failure url</h1>
 <p>Your transaction is failed. Bank response:  <%= @bank_response %> </p>
 <script>
-  PayU.onFailure();
+  PayU.onFailure("<%= @bank_response %>");
 </script>
