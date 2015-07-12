@@ -4,11 +4,13 @@ class ReceiverController < ApplicationController
 
   def success
     # render text: "Just returning the post params #{params}"
-    render js: "PayU.onSuccess(#{params})"
+    # render js: "PayU.onSuccess(#{params})"
+    render js: "PayU.onSuccess();"
   end
 
   def failure
-    render text: "Just returning the post params #{params}"
-    render js: "PayU.onFailure(#{params})"
+    # render text: "Just returning the post params #{params}"
+    # render js: "PayU.onFailure(#{params})"
+    render js: "PayU.onFailure();"
   end
 end
