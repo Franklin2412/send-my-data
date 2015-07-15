@@ -32,7 +32,6 @@ class ReceiverController < ApplicationController
       mandatory_params.each do |mandatory_param|
         if params[mandatory_param]
           hash_string << params[mandatory_param] << '|'
-          puts 'hash_string: ' + hash_string
         else
           message =  "Mandatory param #{mandatory_param} is missing. could not calculate payment hash"
           status = 1
