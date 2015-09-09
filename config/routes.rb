@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   match '/success' => 'receiver#success', via: :post
   match '/failure' => 'receiver#failure', via: :post
+  match '/ios_success' => 'receiver#ios_success', via: :post
+  match '/ios_failure' => 'receiver#ios_failure', via: :post
   match '/get_hash' => 'receiver#get_hash', via: :post
 
   # The priority is based upon order of creation: first created -> highest priority.

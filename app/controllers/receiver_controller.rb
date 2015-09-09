@@ -1,6 +1,6 @@
 class ReceiverController < ApplicationController
   #do not use this on production. this is just for local curl request.
-  skip_before_filter :verify_authenticity_token, only: [:success, :failure, :get_hash]
+  skip_before_filter :verify_authenticity_token, only: [:success, :failure, :get_hash, :ios_failure, :ios_success]
 
   def success
     @bank_response = request.body.read
@@ -10,13 +10,21 @@ class ReceiverController < ApplicationController
     @bank_response = request.body.read
   end
 
+  def ios_success
+    @bank_response = request.body.read
+  end
+
+  def ios_failure
+    @bank_response = request.body.read
+  end
+
   def get_hash
     render json: validate_params
   end
 
   private
   def sample_merchant_details
-    {"gtKFFx" => "eCwWELxi", "smsplus" => "ibibo", "0MQaQP" => "13p0PXZk"}
+    {"gtKFFx" => "eCwWELxi", "smsplus" => "1b1b0", "0MQaQP" => "13p0PXZk"}
   end
 
   def mandatory_params

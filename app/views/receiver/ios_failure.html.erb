@@ -1,0 +1,26 @@
+<h1>This is the failure url</h1>
+<p>Your transaction is failed. Bank response:  <%= @bank_response %> </p>
+<script>
+
+    function connectWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) {
+            callback(WebViewJavascriptBridge)
+        }
+        else {
+            document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                callback(WebViewJavascriptBridge)
+            }, false)
+        }
+
+    }
+
+    connectWebViewJavascriptBridge(function(PayU) {
+
+        PayU.onFailure("<%= @bank_response %>" , function(responseData)
+
+        {
+        })
+
+    })
+
+</script>
