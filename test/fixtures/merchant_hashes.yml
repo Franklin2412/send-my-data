@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  merchant_key: MyString
+  user_credentials: MyString
+  card_token: MyString
+  merchant_hash: MyString
+
+two:
+  merchant_key: MyString
+  user_credentials: MyString
+  card_token: MyString
+  merchant_hash: MyString

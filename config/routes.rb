@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   match '/ios_failure' => 'receiver#ios_failure', via: :post
   match '/get_hash' => 'receiver#get_hash', via: :post
 
+  match '/get_merchant_hashes' => 'one_click_payment_hash#get_merchant_hashes', via: :post
+  match '/store_merchant_hash' => 'one_click_payment_hash#store_merchant_hash', via: :post
+  match '/delete_merchant_hash' => 'one_click_payment_hash#delete_merchant_hash', via: :post
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
