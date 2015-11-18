@@ -1,6 +1,6 @@
 class ReceiverController < ApplicationController
   #do not use this on production. this is just for local curl request.
-  skip_before_filter :verify_authenticity_token, only: [:success, :failure, :get_hash, :ios_failure, :ios_success]
+  skip_before_filter :verify_authenticity_token, only: [:success, :failure, :get_hash, :ios_failure, :ios_success, :ios_test_success]
 
   def success
     @bank_response = request.body.read
@@ -15,6 +15,10 @@ class ReceiverController < ApplicationController
   end
 
   def ios_failure
+    @bank_response = request.body.read
+  end
+
+  def ios_test_success
     @bank_response = request.body.read
   end
 
