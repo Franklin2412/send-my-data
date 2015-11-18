@@ -1,7 +1,7 @@
 <h1>This is the success url</h1>
 <p>Your transaction is completed successfully. Bank response is <%= @bank_response %></p>
 <script>
-    (function() {
-        PayU.onSuccess("<%= @bank_response %>");
-    })();
+     function android_success() {
+         PayU.onSuccess("<%= @bank_response %>");
+     }
 </script>
