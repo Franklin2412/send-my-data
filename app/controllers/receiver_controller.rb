@@ -28,7 +28,7 @@ class ReceiverController < ApplicationController
 
   private
   def sample_merchant_details
-    {"gtKFFx" => "eCwWELxi", "smsplus" => "1b1b0", "0MQaQP" => "13p0PXZk", "PqvxqV" => "6SPh4Ulq", "obScKz" => "Ml7XBCdR", "DXOF8m" => "2Hl5U0En"}
+    {"gtKFFx" => "eCwWELxi", "smsplus" => "1b1b0", "0MQaQP" => "13p0PXZk", "PqvxqV" => "6SPh4Ulq", "obScKz" => "Ml7XBCdR", "DXOF8m" => "2Hl5U0En", "WhccBa" => "UX5K0KvP", "ukgVCk" => "DzSugFtI"}
   end
 
   def mandatory_params

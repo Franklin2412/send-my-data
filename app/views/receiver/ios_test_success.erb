@@ -1,8 +1,8 @@
 <h1>This is the success url</h1>
 <p>Your transaction is completed successfully. Bank response is <%= @bank_response %></p>
 <script>
-     function android_success() {
+     function payu_js_callback() {
          PayU.onSuccess("<%= @bank_response %>");
      }
-     android_success();
+     payu_js_callback();
 </script>
