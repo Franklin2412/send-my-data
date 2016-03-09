@@ -66,6 +66,7 @@ class ReceiverController < ApplicationController
       end
 
       result[:check_offer_status_hash] = calculate_hash 'check_offer_status', params['offer_key'] if params['offer_key']
+      result[:check_offer_details_hash] = calculate_hash 'check_offer_details', params['offer_key'] if params['offer_key']
       result[:check_isDomestic_hash] = calculate_hash 'check_isDomestic', params['card_bin'] if params['card_bin']
       result[:vas_for_mobile_sdk_hash] = calculate_hash 'vas_for_mobile_sdk', 'default'
       result[:get_merchant_ibibo_codes_hash] = calculate_hash 'get_merchant_ibibo_codes', 'default'
