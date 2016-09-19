@@ -52,7 +52,15 @@ class ReceiverController < ApplicationController
         #lets add payment hash
         # lets add salt  and then calculate the hash
       puts 'hash_string out: ' + hash_string
-        result[:payment_hash] = calculate_payment_hash hash_string << '|||||' << sample_merchant_details[params['key']]  if status == 0
+        if status == 0
+          if params[:subvention_amount]
+            hash_string << '|||||' << sample_merchant_details[params['key']] << '|' << params[:subvention_amount]
+          else
+            hash_string << '|||||' << sample_merchant_details[params['key']]
+          end
+          result[:payment_hash] = calculate_payment_hash hash_string
+        end
+
 
       #calculated other hashes
       if params[:user_credentials]
